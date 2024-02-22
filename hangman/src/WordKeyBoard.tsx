@@ -38,7 +38,9 @@ function WordKeyBoard() {
         gap: ".5rem",
       }}
     >
-      WordKeyBoard
+      {KEYS.map((key) => {
+        return <button key={key}>{key}</button>;
+      })}
     </div>
   );
 }

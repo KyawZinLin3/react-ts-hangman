@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Keyboard.module.css";
 
 const KEYS = [
   "a",
@@ -39,7 +40,15 @@ function WordKeyBoard() {
       }}
     >
       {KEYS.map((key) => {
-        return <button key={key}>{key}</button>;
+        return (
+          <button
+            disabled
+            className={`${styles.btn} ${styles.inactive}`}
+            key={key}
+          >
+            {key}
+          </button>
+        );
       })}
     </div>
   );

@@ -87,15 +87,14 @@ const LEFT_LEG = (
   ></div>
 );
 
-function HangmanDrawing() {
+const BODY_PART = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG];
+type HangmanDrawingProps = {
+  numberOfGuesses: number;
+};
+function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
   return (
     <div style={{ position: "relative" }}>
-      {HEAD}
-      {BODY}
-      {RIGHT_ARM}
-      {LEFT_ARM}
-      {RIGHT_LEG}
-      {LEFT_LEG}
+      {BODY_PART.slice(0, numberOfGuesses)}
       <div
         style={{
           height: "50px",

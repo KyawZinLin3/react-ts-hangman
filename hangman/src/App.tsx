@@ -17,6 +17,8 @@ function App() {
 
   function addGuessLetter(letter: string) {
     if (guessLetter.includes(letter)) return;
+
+    setGuessLatter((currentLetters) => [...currentLetters, letter]);
   }
 
   useEffect(() => {
